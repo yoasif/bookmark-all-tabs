@@ -22,11 +22,11 @@ async function showBookmarkWindow(tabs) {
         });
 }
 
-async function bookmarkRight(window, index) {
+async function bookmarkAll(window, index) {
     let tabs = await browser.tabs.query({windowId: window});
 
     //to the right of index
-    tabs = tabs.filter((t) => t.index > index);
+    //tabs = tabs.filter((t) => t.index > index);
 
     //remove duplicate tabs
     tabs = tabs.filter((t1, i1) =>
@@ -39,21 +39,21 @@ async function bookmarkRight(window, index) {
 
 browser.contextMenus.create({
         contexts: ['tab'],
-        id: 'bookmark-right',
+        id: 'bookmark-all',
         title: browser.i18n.getMessage('menuItem')
     });
 browser.contextMenus.onClicked.addListener((info, tab) => {
-        if (info.menuItemId == 'bookmark-right') {
-            bookmarkRight(tab.windowId, tab.index);
+        if (info.menuItemId == 'bookmark-all') {
+            bookmarkAll(tab.windowId, tab.index);
         }
     });
 
 browser.commands.onCommand.addListener(async (command) => {
-        if (command == 'bookmark-right') {
+        if (command == 'bookmark-all') {
             let tabs = await browser.tabs.query({
                     active: true,
                     windowId: browser.windows.WINDOW_ID_CURRENT
                 });
-            bookmarkRight(browser.windows.WINDOW_ID_CURRENT, tabs[0].index);
+            bookmarkAll(browser.windows.WINDOW_ID_CURRENT, tabs[0].index);
         }
     });

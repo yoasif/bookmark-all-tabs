@@ -1,13 +1,13 @@
 {
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "homepage_url": "https://github.com/mdejean/bookmarktoright",
+  "homepage_url": "https://github.com/yoasif/bookmark-all-tabs",
   "manifest_version": 2,
-  "version": "1.3",
+  "version": "1.0",
   "icons": {
-    "16": "bookmarkright.svg",
-    "48": "bookmarkright.svg",
-    "96": "bookmarkright.svg"
+    "16": "bookmark.svg",
+    "48": "bookmark.svg",
+    "96": "bookmark.svg"
   },
   "applications": {
     "gecko": {
@@ -17,7 +17,7 @@
 
   "commands": {
     "bookmark-right": {
-      "suggested_key": { "default": "Ctrl+Shift+Period" },
+      "suggested_key": { "default": "Ctrl+Shift+D" },
       "description": "__MSG_commandDescription__"
     }
   },

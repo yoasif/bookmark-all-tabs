@@ -1,21 +1,21 @@
 {
   "extensionName": {
-    "message": "Bookmark Tabs to the Right",
+    "message": "Bookmark All Tabs",
     "description": "Name of the extension."
   },
 
   "extensionDescription": {
-    "message": "Bookmark tabs to the right of a tab by right clicking or the current tab with a key command",
+    "message": "Bookmark all tabs. Fork of Bookmark Tabs to the Right.",
     "description": "Description of the extension."
   },
 
   "menuItem": {
-    "message": "Bookmark Tabs to the Right",
+    "message": "Bookmark All Tabs…",
     "description": "Tab context menu item"
   },
 
   "commandDescription": {
-    "message": "Bookmark tabs to the right",
+    "message": "Bookmark All Tabs…",
     "description": "Keyboard shortcut description"
   },
 
